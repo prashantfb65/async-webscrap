@@ -69,7 +69,7 @@ if __name__ == '__main__':
         b = pickle.load(handle)
     urls = list(b.keys())
 
-    for i in range(2500, len(urls), 100):
+    for i in range(0, len(urls), 100):
         batched_urls = urls[i:i+100]
         fetch_async(batched_urls)
         result = medium_posts.bulk_write([
